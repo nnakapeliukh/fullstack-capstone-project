@@ -15,6 +15,7 @@ dotenv.config();
 const JWT_SECRET = process.env.JWT_SECRET;
 router.post("/register", async (req, res) => {
   try {
+    console.log("trying to connect");
     // Task 1: Connect to `giftsdb` in MongoDB through `connectToDatabase` in `db.js`
     const db = await connectToDatabase();
     // Task 2: Access MongoDB collection

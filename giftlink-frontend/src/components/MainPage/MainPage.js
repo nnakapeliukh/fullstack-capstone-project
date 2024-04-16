@@ -9,6 +9,7 @@ function MainPage() {
   useEffect(() => {
     const fetchGifts = async () => {
       try {
+        console.log("trying to fetch ",`${urlConfig.backendUrl}/api/gifts`)
         let url = `${urlConfig.backendUrl}/api/gifts`;
         const response = await fetch(url);
         if (!response.ok) {
@@ -18,7 +19,7 @@ function MainPage() {
         const data = await response.json();
         setGifts(data);
       } catch (error) {
-        console.log("Fetch error: " + error.message);
+        console.log("Fetch error: " , error.message);
       }
     };
     fetchGifts();
