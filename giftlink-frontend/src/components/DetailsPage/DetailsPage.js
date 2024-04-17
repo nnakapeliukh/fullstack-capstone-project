@@ -40,8 +40,7 @@ function DetailsPage() {
 		// Task 3: Scroll to top on component mount
 		window.scrollTo(0, 0);
 
-    }, [productId]);
-
+    }, [productId, navigate]);
 
     const handleBackClick = () => {
 		// Task 4: Handle back click
@@ -93,7 +92,7 @@ return (
                             <div className="no-image-available-large">No Image Available</div>
                         )}
                     </div>
-                    // Task 6: Display gift details
+                    {/* // Task 6: Display gift details */}
                     	<p><strong>Category:</strong> 
 				{gift.category}
 			</p>
